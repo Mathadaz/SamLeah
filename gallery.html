@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | SamLeah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar scrolled" id="navbar">
+        <a href="index.html" class="nav-logo"><span class="logo-mark">✦</span> SamLeah</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Services</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Book Us</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero ph-gallery">
+        <div class="ph-bg"></div>
+        <div class="ph-content">
+            <span class="section-tag light">Our Portfolio</span>
+            <h1>Moments We've Been <em>Privileged</em> to Hold</h1>
+            <p>Every image here represents a family, a milestone, a story. Browse through the memories we've helped
+                create.</p>
+        </div>
+        <div class="ph-scroll-hint">scroll ↓</div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section class="gal-filter-section">
+        <div class="gf-inner">
+            <div class="gal-filters" id="galFilters">
+                <button class="gf-btn active" onclick="filterGal(this, 'all')">All</button>
+                <button class="gf-btn" onclick="filterGal(this, 'wedding')">Weddings</button>
+                <button class="gf-btn" onclick="filterGal(this, 'party')">Parties &amp; Birthdays</button>
+                <button class="gf-btn" onclick="filterGal(this, 'funeral')">Memorials</button>
+                <button class="gf-btn" onclick="filterGal(this, 'photo')">Photography</button>
+                <button class="gf-btn" onclick="filterGal(this, 'corporate')">Corporate</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section class="full-gallery">
+        <div class="fg-inner">
+            <div class="fg-grid" id="galGrid">
+
+                <!-- WEDDINGS -->
+                <div class="fg-item fi-tall" data-cat="wedding">
+                    <div class="fg-bg fg-w1"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Wedding</span>
+                        <h4>Traditional Ceremony</h4>
+                        <p>Tshaulu · 2024</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="wedding">
+                    <div class="fg-bg fg-w2"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Wedding</span>
+                        <h4>White Wedding Reception</h4>
+                        <p>Pretoria · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item fi-wide" data-cat="wedding">
+                    <div class="fg-bg fg-w3"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Wedding</span>
+                        <h4>First Dance Moment</h4>
+                        <p>Johannesburg · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="wedding">
+                    <div class="fg-bg fg-w4"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Wedding</span>
+                        <h4>Bridal Party</h4>
+                        <p>Limpopo · 2024</p>
+                    </div>
+                </div>
+
+                <!-- PARTIES -->
+                <div class="fg-item fi-wide" data-cat="party">
+                    <div class="fg-bg fg-p1"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Birthday</span>
+                        <h4>21st Birthday Gala</h4>
+                        <p>Pretoria · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item fi-tall" data-cat="party">
+                    <div class="fg-bg fg-p2"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Party</span>
+                        <h4>Year-End Celebration</h4>
+                        <p>Midrand · 2024</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="party">
+                    <div class="fg-bg fg-p3"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Birthday</span>
+                        <h4>50th Milestone</h4>
+                        <p>Johannesburg · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="party">
+                    <div class="fg-bg fg-p4"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Party</span>
+                        <h4>Kids Celebration</h4>
+                        <p>Pretoria · 2024</p>
+                    </div>
+                </div>
+
+                <!-- FUNERALS -->
+                <div class="fg-item fi-wide" data-cat="funeral">
+                    <div class="fg-bg fg-f1"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Memorial</span>
+                        <h4>A Life Well Lived</h4>
+                        <p>Limpopo · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="funeral">
+                    <div class="fg-bg fg-f2"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Memorial</span>
+                        <h4>Family Tribute</h4>
+                        <p>Tshaulu · 2024</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="funeral">
+                    <div class="fg-bg fg-f3"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Memorial</span>
+                        <h4>Farewell Service</h4>
+                        <p>Pretoria · 2025</p>
+                    </div>
+                </div>
+
+                <!-- PHOTOGRAPHY -->
+                <div class="fg-item fi-tall" data-cat="photo">
+                    <div class="fg-bg fg-ph1"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Photography</span>
+                        <h4>Couple Portrait Session</h4>
+                        <p>Johannesburg · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item fi-wide" data-cat="photo">
+                    <div class="fg-bg fg-ph2"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Photography</span>
+                        <h4>Candid Moments</h4>
+                        <p>Pretoria · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="photo">
+                    <div class="fg-bg fg-ph3"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Photography</span>
+                        <h4>Family Portrait</h4>
+                        <p>Limpopo · 2024</p>
+                    </div>
+                </div>
+
+                <!-- CORPORATE -->
+                <div class="fg-item" data-cat="corporate">
+                    <div class="fg-bg fg-c1"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Corporate</span>
+                        <h4>Annual Company Gala</h4>
+                        <p>Sandton · 2025</p>
+                    </div>
+                </div>
+                <div class="fg-item fi-wide" data-cat="corporate">
+                    <div class="fg-bg fg-c2"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Corporate</span>
+                        <h4>Awards Evening</h4>
+                        <p>Midrand · 2024</p>
+                    </div>
+                </div>
+                <div class="fg-item" data-cat="corporate">
+                    <div class="fg-bg fg-c3"></div>
+                    <div class="fg-overlay"><span class="fg-cat">Corporate</span>
+                        <h4>Product Launch</h4>
+                        <p>Pretoria · 2025</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lb-close" onclick="closeLightbox()">✕</button>
+        <div class="lb-content" id="lbContent"></div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta-section reveal-section" style="margin-top:0;">
+        <div class="cta-inner">
+            <div class="cta-deco d1"></div>
+            <div class="cta-deco d2"></div>
+            <span class="section-tag">Want to Be in Here?</span>
+            <h2>Let Us Create Your <em>Memory</em></h2>
+            <p>Book SamLeah for your next occasion and let our team capture every moment beautifully.</p>
+            <div class="cta-actions">
+                <a href="contact.html" class="btn-primary">Book a Consultation</a>
+                <div class="cta-contact-info">
+                    <span>📞 +27 82 513 2893</span>
+                    <span>✉ samleahholdings@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="footer-logo"><span class="logo-mark">✦</span> SamLeah</div>
+                <p>Creating memories across every occasion — joyful and sorrowful alike. Based in Tshaulu, serving all
+                    of Gauteng &amp; Limpopo.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h5>Navigate</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-nav">
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="events.html#weddings">Weddings</a></li>
+                    <li><a href="events.html#parties">Parties &amp; Birthdays</a></li>
+                    <li><a href="events.html#funerals">Funerals &amp; Memorials</a></li>
+                    <li><a href="events.html#photography">Photography</a></li>
+                    <li><a href="events.html#mc">MC &amp; Hosting</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h5>Get In Touch</h5>
+                <p>Tshaulu, Masiwane, SA</p>
+                <p>samleahholdings@gmail.com</p>
+                <p>+27 82 513 2893</p>
+                <a href="contact.html" class="btn-primary" style="margin-top:1rem;display:inline-block;">Book Us</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 SamLeah Holdings. All rights reserved. We create memories.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+        });
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('open');
+        }
+        function filterGal(btn, cat) {
+            document.querySelectorAll('.gf-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.fg-item').forEach(item => {
+                if (cat === 'all' || item.dataset.cat === cat) {
+                    item.style.display = '';
+                    setTimeout(() => item.classList.add('fg-visible'), 10);
+                } else {
+                    item.classList.remove('fg-visible');
+                    item.style.display = 'none';
+                }
+            });
+        }
+        // Init all visible
+        document.querySelectorAll('.fg-item').forEach(item => item.classList.add('fg-visible'));
+
+        // Click to expand
+        document.querySelectorAll('.fg-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const lb = document.getElementById('lightbox');
+                const lbc = document.getElementById('lbContent');
+                const overlay = item.querySelector('.fg-overlay');
+                const bg = item.querySelector('.fg-bg');
+                lbc.innerHTML = `
+          <div class="lb-img" style="background:${getComputedStyle(bg).background}"></div>
+          <div class="lb-info">
+            ${overlay.innerHTML}
+          </div>
+        `;
+                lb.classList.add('open');
+            });
+        });
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in-view'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal-section').forEach(s => observer.observe(s));
+    </script>
+</body>
+
+</html>
